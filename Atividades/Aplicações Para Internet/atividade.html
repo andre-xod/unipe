@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    
 <!-- Cabeça -->
 <head>
     <meta charset="UTF-8">
@@ -7,36 +8,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- CSS -->
-    <style> 
-        th{
-            background-color: #4f81bd;
+    <style>
+        th {
+            background-color: #196ce9;
             color: white;
         }
 
-        .fundo-azul-claro{
+        .fundo-azul-claro {
             background-color: #cfd7e7;
         }
 
-        .fundo-azul-mais-claro{
+        .fundo-azul-mais-claro {
             background-color: #e8ecf4;
         }
-        
-        .w-75{
+
+        .w-75 {
             width: 75px;
         }
 
-        .w-300{
+        .w-100 {
+            width: 100px;
+        }
+
+        .w-300 {
             width: 300px;
         }
     </style>
-
 <!-- Corpo -->
 <body>
-    <h1>HTML <sup>Linguagem de Marcação de Hipertexto</sup></h1>
-    <h2>Tutoriais para Iniciantes</h2>
-    <p> <img src="https://infoenem.com.br/wp-content/uploads/2015/09/unipe.jpeg" width="100" align="left"> <ins><strong>HTML</strong></ins> <i>(Linguagem de Marcação de HiperTexto)</i> é o bloco de construção mais básico da web. <mark>Define o significado e a estrutura do conteúdo da web.</mark> Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento <i>(JavaScript)</i> de uma página web. </p>
-    <br><br><br>
-    
+    <header>
+        <h1>HTML <sup>Linguagem de Marcação de Hipertexto</sup></h1>
+        <h2>Tutoriais para Iniciantes</h2>
+    </header>
+
+    <div>
+        <p> <img src="https://infoenem.com.br/wp-content/uploads/2015/09/unipe.jpeg" width="100" align="left">
+            <ins><strong>HTML</strong></ins> <i> (Linguagem de Marcação de HiperTexto)</i> é o bloco de construção mais
+            básico da web. <mark>Define o significado e a estrutura do conteúdo da web.</mark> Outras tecnologias além
+            do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a
+            funcionalidade/comportamento <i>(JavaScript)</i> de uma página web. Outras tecnologias do HTML geralmente
+            são usadas como Elemento HTML é uma parte da página da internet. Um elemento é qualquer objeto identficável
+            dentro de um documenti, por exemlo, um caractere, palavra, imagem, parágrafo ou célula de planilha <br><br>
+        </p>
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -82,5 +97,24 @@
             </tr>
         </tbody>
     </table>
+
+    <section>
+        <article>
+            <ol class="w-100">
+                <li class="fundo-azul-claro">TCP/IP</li>
+                <li class="fundo-azul-mais-claro">HTTP/HTTPS</li>
+                <li class="fundo-azul-claro">XMPP</li>
+                <li class="fundo-azul-mais-claro">DHCP</li>
+                <li class="fundo-azul-claro">SSH</li>
+            </ol>
+        </article>
+    </section>
+
+    <footer>
+        <p>Matéria: Aplicações Para Internet (API) <br>
+            Aluno: André Lucas
+        </p>
+    </footer>
 </body>
+
 </html>

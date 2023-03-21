@@ -2,142 +2,74 @@ from random import choice
 from random import randint
 import time
 
-lista = ["Lobo"] 
-''', "Ladrão", "Goblin"]'''
-criatura = choice(lista)
+class Entidade:
+    def __init__(self, tipo, hp, ca, bonusIniciativa):
+        self.tipo = tipo
+        self.hp = hp
+        self.ca = ca
+        self.iniciativa = randint(1, 20) + bonusIniciativa
 
-hpPlayer = 100
-caPlayer = 10
-
-print()
-print("Um", criatura, "aparece! ")
-
-if criatura == "Lobo":
-    hpLobo = 50
-    print(hpLobo, "De HP")
+    def acertoDeAtaque(self):
+        acerto = randint(1,20)
+        return acerto
     
-    caLobo = 10
-    iniciativaCriatura = randint(1,20) +1
+    def danoDeAtaque(self, max):
+        dano = randint(1, max)
+        return dano
 
-    print()
-    print('Role sua iniciativa!')
-    iniciativaPlayer = input()
-    iniciativaPlayer = randint(1,20) +20
-    print()
+player = Entidade(tipo="P",hp=100, ca=15, bonusIniciativa=5)
+lobo = Entidade(tipo="C", hp=50, ca=10, bonusIniciativa=1)
 
-    while hpLobo > 0:
-        if iniciativaPlayer >= iniciativaCriatura:
-            print(iniciativaPlayer, "Vs", iniciativaCriatura, "Seu Turno! ")
-            print()
-            print('Role seu teste de ataque!')
+ordem = []
+vez = 0
 
-            testeDeAtaque = input()
-            testeDeAtaque = randint(1,20)
-            testeDeAtaqueBonus = testeDeAtaque +5
+print("Iniciativa do Player ", player.iniciativa)
+print("Iniciativa da Criatura ", lobo.iniciativa)
 
-            print()
+if player.iniciativa >= lobo.iniciativa:
+    ordem.append(player)
+    ordem.append(lobo)
+    input("Iniciativa do Player, Pressione Enter para rolar o dado > ")
+else:
+    ordem.append(lobo)
+    ordem.append(player)
+    input("Iniciativa da Criatura, A Criatura Rolou seu ataque!")
 
-            if testeDeAtaque >= caLobo:
-                print("Teste de ataque:", testeDeAtaque, "+ 5 =", testeDeAtaqueBonus)
-                print("Classe de Armadura:", caLobo, "Você acertou o Lobo!")
-                print("Role o Dano!")
+while player.hp > 0 and lobo.hp > 0:
 
-                dano = input()
-                dano = randint(1,8)
-                danoBonus = dano +5
-                print()
+    print("\nVez de ", ordem[vez].tipo)    
 
-                hpLobo = hpLobo - danoBonus
-                print(dano, "+ 5 =", danoBonus, "De dano")
-                print(hpLobo, "De Hp")
-                time.sleep(2)
+    acertoDeAtaque = ordem[vez].acertoDeAtaque()
+    print("Acerto de Ataque: ", acertoDeAtaque)
 
-                print("O lobo vai atacar! Contra-Atacar ou Esquivar?")
-                ação = input()
+    if ordem[vez].tipo=="P":
+        danoDeAtaque = ordem[vez].danoDeAtaque(10)
+    elif ordem[vez].tipo=="C":
+        danoDeAtaque = ordem[vez].danoDeAtaque(8)
 
-                if ação == "Contra-Atacar":
-                    print()
-                    print("O Lobo vai atacar!")
+    if vez == 0:
+        if acertoDeAtaque >= ordem[1].ca:
+            print("Dano de Ataque: ", danoDeAtaque)
+            ordem[1].hp -= danoDeAtaque
+            print("Hp do " + str(ordem[1].tipo) + ": " + str(ordem[1].hp))
+        else:
+            print("Errou o Ataque!")
 
-                    testeDeAtaqueCriatura = randint(1,20) +1
-                    print()
-                    time.sleep(2)
+    elif vez == 1:
+        if acertoDeAtaque >= ordem[0].ca:
+            print("Dano de Ataque: ", danoDeAtaque)
+            ordem[0].hp -= danoDeAtaque
+            print("Hp do " + str(ordem[0].tipo) + ": " + str(ordem[0].hp))
+        else:
+            print("Errou o Ataque!")
 
-                    if testeDeAtaqueCriatura >= caPlayer:
-                        print("Teste de ataque:", testeDeAtaqueCriatura)
-                        print("Sua Classe de Armadura:", caPlayer, "O Lobo te acertou!")
-                        print("A criatura ira rolar o dano!")
+    input("Pressione Enter para a próxima rodada > ")
 
-                        time.sleep(2)
-                        danoCriatura = randint(1,8) +1
-                        print()
+    vez += 1
+    if vez > 1:
+        vez = 0
 
-                        hpPlayer = hpPlayer - danoCriatura
-                        print(danoCriatura, "De dano")
-                        print(hpPlayer, "De Hp")
-                        time.sleep(2)
-
-                    elif testeDeAtaqueCriatura < caPlayer:
-                        print("Teste de ataque:", testeDeAtaqueCriatura)
-                        print("Sua Classe de Armadura:", caPlayer, "O Lobo errou!")
-                        print("Role seu ataque para Contra-Atacar!")
-
-                        testeDeAtaque2 = input()
-                        testeDeAtaque2 = randint(1,20) +5
-
-                        if testeDeAtaque2 >= caLobo:
-                            print("Teste de ataque:", testeDeAtaque2)
-                            print("Classe de Armadura", caLobo, "Você acertou o Lobo!")
-                            print("Role o Dano!")
-
-                            dano = randint(1,8) +5
-                            print()
-
-                            hpLobo = hpLobo - dano
-                            print(dano, "De dano")
-                            print(hpLobo, "De Hp")
-                            time.sleep(2)
-
-                        elif testeDeAtaque2 < caLobo:
-                            print("Teste de Ataque:", testeDeAtaque2)
-                            print("Classe de Armadura", caLobo, "Você errou o Lobo!")
-                            print(hpLobo)
-
-                elif ação == "Esquivar":
-                    caPlayer = 15
-                    print("O Lobo vai atacar!")
-
-                    testeDeAtaqueCriatura = randint(1,20)
-                    print()
-                    time.sleep(2)
-
-                    if testeDeAtaqueCriatura >= caPlayer:
-                        print("Teste de ataque:", testeDeAtaqueCriatura)
-                        print("Sua Classe de Armadura:", caPlayer, "O Lobo te acertou!")
-                        print("A criatura ira rolar o dano!")
-
-                        time.sleep(2)
-                        danoCriatura = randint(1,8) +1
-                        print()
-
-                        hpPlayer = hpPlayer - danoCriatura
-                        print(danoCriatura, "De dano")
-                        print(hpPlayer, "De Hp")
-                        time.sleep(2)
-
-                    elif testeDeAtaqueCriatura < caPlayer:
-                        print("Teste de ataque:", testeDeAtaqueCriatura)
-                        print("Sua Classe de Armadura:", caPlayer, "O Lobo errou!")
-                        print(hpLobo)
-                        time.sleep(2)
-
-            elif testeDeAtaque < caLobo:
-                print("Teste de ataque:", testeDeAtaque)
-                print("Sua Classe de Armadura:", caPlayer, "Você errou!")
-                print(hpPlayer)
-                time.sleep(2)
-
-        elif iniciativaPlayer < iniciativaCriatura:
-            print(iniciativaPlayer, "Vs", iniciativaCriatura, "A Criatura age primeiro!")
-            print('A Criatura vai atacar! Contra-Atacar ou Esquivar?')
-            input()        
+if player.hp > lobo.hp:
+    print("Player Matou o Lobo! Venceu!")
+else:
+    print("Se Fdueu! Lobo te ESTRAÇALHOu!")
