@@ -1,0 +1,25 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real base
+		real altura
+		real area
+
+		escreva("Digite o primeiro valor > ")
+		leia(base)
+
+		escreva("Digite o segundo valor > ")
+		leia(altura)
+
+		se (base == altura)
+			escreva("A Figura é um quadrado")
+		senao
+			escreva("A Figura é um retângulo")
+
+		area = base * altura
+
+		escreva("\nA área da figura é: ", area)
+	}
+}
