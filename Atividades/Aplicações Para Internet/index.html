@@ -10,12 +10,102 @@
 
     <!-- CSS -->
     <style>
+        .maior-div{
+            width: 80%;
+            margin-left: 125px;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #048dfc;
+            padding: 20px;
+        }
+
+        .font-size-26 {
+            font-size: 26px;
+        }
+
+        .nav-ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            background-color: #048dfc;
+            padding: 5px;
+        }
+
+        .f-grow {
+            flex-grow: 1;
+        }
+
+        .txt-dc-none{
+            text-decoration: none;
+        }
+
+        .width-30 {
+            width: 30%;
+        }
+
+        .mrg-btt-50 {
+            margin-bottom: 50px;
+        }
+
+        .mrg-btt-20 {
+            margin-bottom: 20px;
+        }
+
+        .w-100 {
+            width: 100px;
+        }
+
+        .w-85-prct {
+            width: 85%;
+        } 
+
+        .white {
+            color: white;
+        }
+
+        .tabela {
+            border: 2px solid black;
+            flex: auto;
+            background-color: #196ce9;
+            width: 50%;
+        }
+
+        .dis-flex {
+            display: flex;
+        }
+
+        .txt-algn-c {
+            text-align: center;
+        }
+
+        .bg-cyan{
+            background-color: #048dfc;
+        }
+
+        .bg-green {
+            background-color: green;
+        }
+
+        .bg-purple {
+            background-color: purple;
+        }
+
+        .bg-light-grey {
+            background-color: #efefef;
+        }
+
+        .f-left {
+            float: left;
+        }
+
         th {
             background-color: #196ce9;
             color: white;
         }
 
-        .fundo-azul-claro {
+        tbody {
             background-color: #cfd7e7;
         }
 
@@ -23,49 +113,70 @@
             background-color: #e8ecf4;
         }
 
-        .w-75 {
-            width: 75px;
+        .tabela-protocol {
+            border: 2px solid black;
+            background-color: blueviolet;
+            flex: auto;
+            width: 50%;
         }
 
-        .w-100 {
-            width: 100px;
+        .linguagem-1 {
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
 
-        .w-300 {
-            width: 300px;
+        .linguagem-2 {
+            border: 2px solid black;
+            width: 33.33%;
+            height: 200px;
+            padding: 20px;
         }
+
+        .pad-auto {
+            padding: auto;
+        }
+
+        .footer-div {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            text-decoration: none;
+        }
+
     </style>
 
 <!-- Corpo -->
 <body>
-    <div style="width: 80%; margin-left: 125px;">
-        <header style="font-size: 27px; text-align: center; background-color: #048dfc; padding: 20px;">
+    <div class="maior-div">
+        <header class="header font-size-26">
             <h1>HTML <sup>Linguagem de Marcação de <br> Hipertexto</sup></h1>
             <h2>Tutoriais para Iniciantes</h2>
         </header>
 
         <nav>
-            <ul style="list-style: none; display: flex; justify-content: space-between; background-color: #048dfc; padding: 5px;">
-                <li style="flex-grow: 1;"> <a href="#" style="color: white; text-decoration: none;">Início</a></li>
-                <li style="flex-grow: 1;"> <a href="#html" style="color: white; text-decoration: none;">HTML</a></li>
-                <li style="flex-grow: 1;"> <a href="#tabela" style="color: white; text-decoration: none;">Tabela e Listas</a></li>
-                <li style="flex-grow: 1;"> <a href="#sobre" style="color: white; text-decoration: none;">Sobre CSS, HTML e JS</a></li>
-                <li style="flex-grow: 1;"> <a href="#rodape" style="color: white; text-decoration: none;">Links</a></li>
-                <li style="flex-grow: 1;"> <a href="./contatos.html" style="color: white; text-decoration: none;">Contato</a></li>
+            <ul class="nav-ul">
+                <li class="f-grow"> <a href="#" class="white txt-dc-none">Início</a></li>
+                <li class="f-grow"> <a href="#html" class="white txt-dc-none">HTML</a></li>
+                <li class="f-grow"> <a href="#tabela" class="white txt-dc-none">Tabela e Listas</a></li>
+                <li class="f-grow"> <a href="#sobre" class="white txt-dc-none">Sobre CSS, HTML e JS</a></li>
+                <li class="f-grow"> <a href="#rodape" class="white txt-dc-none">Links</a></li>
+                <li class="f-grow"> <a href="./contatos.html" class="white txt-dc-none">Contato</a></li>
             </ul>
         </nav>
 
         <section id="Início">
-            <article style="width: 30%;">
-                <img src="https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.png" width="100" align="left">
+            <article class="width-30">
+                <img src="https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.png" class="w-100 f-left">
             </article>
 
-            <article style="margin-bottom: 50px;">
+            <article class="mrg-btt-50">
                 <ins><strong>HTML</strong></ins> <i>(Linguagem de Marcação de HiperTexto)</i> é o bloco de construção mais básico da web. <mark>Define o significado e a estrutura do conteúdo da web.</mark> Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento <i>(JavaScript)</i> de uma página web. Outras tecnologias do HTML geralmente são usadas como Elemento HTML é uma parte da página da internet. Um elemento é qualquer objeto identificável dentro de um documento, por exemlo, um caractere, palavra, imagem, parágrafo ou célula de planilha.
             </article>
 
-            <article style="margin-bottom: 20px;">
-                <h1 style="font-size: 25px;">Qual a função do HTML?</h1>
+            <article class="mrg-btt-20">
+                <h1 class="font-size-26">Qual a função do HTML?</h1>
+                
                 <p> 
                     Imagine que você precisa construir um site do zero com informações da sua empresa. Nesse caso, você precisará conhecer a estrutura do HTML, criando um documento no bloco de notas e acrescentando códigos — tags que indicarão parágrafos, quebra de texto, espaçamento, imagens, entre outros. Em geral, em um único site, existem diversos documentos HTML, criando páginas como homepage, página de produto e informações sobre a empresa. Em cada aba, existe um código diferente.
                 </p>
@@ -74,20 +185,20 @@
 
         <hr>
         
-        <section id="tabela" style="display: flex;">
-            <div style="border: 2px solid black; flex: auto; background-color: #196ce9; width: 50%;">
-                <h2 style="text-align: center; color: white;">Tabela de Tags</h2>
+        <section id="tabela" class="dis-flex">
+            <div class="tabela txt-algn-c">
+                <h2 class="white">Tabela de Tags</h2>
                 <hr>
                 <table>
                     <thead>
                         <tr>
                             <th class="w-100">TAGS</th>
-                            <th style="width: 85%;">UTILIDADE</th>
+                            <th class="w-85-prct">UTILIDADE</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- html -->
-                        <tr class="fundo-azul-claro">
+                        <tr>
                             <td>html</td>
                             <td>Define um documento HTML</td>
                         </tr>
@@ -97,7 +208,7 @@
                             <td>Define o corpo de um documento</td>
                         </tr>
                         <!-- h1 > h6 -->
-                        <tr class="fundo-azul-claro">
+                        <tr>
                             <td>h1 > h6</td>
                             <td>Define cabeçalhos 1 a 6</td>
                         </tr>
@@ -107,7 +218,7 @@
                             <td>Define um Parágrafo</td>
                         </tr>
                         <!-- br -->
-                        <tr class="fundo-azul-claro">
+                        <tr>
                             <td>br</td>
                             <td>Insere uma quebra de linha</td>
                         </tr>
@@ -117,7 +228,7 @@
                             <td>Define uma linha horizontal</td>
                         </tr>
                         <!-- comentário -->
-                        <tr class="fundo-azul-claro">
+                        <tr>
                             <td>!-- --</td>
                             <td>Define um comentário</td>
                         </tr>
@@ -125,10 +236,10 @@
                 </table>
             </div>
 
-            <section style=" border: 2px solid black; background-color: blueviolet; flex: auto; width: 50%;">
+            <section class="tabela-protocol">
                 <p>
                     <ol>
-                        <h3 style="color: white;";>Top 5 Protocolos</h3>
+                        <h3 class="white">Top 5 Protocolos</h3>
                         <li>TCP/IP - Transmission Control Protocol</li>
                         <li>HTTP/HTTPS - HyperText Transfer Protocol</li>
                         <li>XMPP - Extensible Messaging and Presence Protocol</li>
@@ -149,18 +260,18 @@
 
         <br>
 
-        <section id="sobre" style="text-align: center; display: flex; justify-content: flex-start; align-items: flex-start;">
-            <section style="border: 2px solid black; background-color: #048dfc; width: 33.33%; height: 200px; padding: 20px;">
+        <section id="sobre" class="linguagem-1">
+            <section class="linguagem-2 bg-cyan">
                 <h3>HTML</h3>
                 <p>O HTML é o componente base da web. Isso quer dizer que ele permite a construção de websites e a inserção de novos conteúdos, como imagens e vídeos, por meio dos hipertextos.</p>
             </section>
 
-            <section style="border: 2px solid black; background-color: green; width: 33.33%; height: 200px; padding: 20px;">
+            <section class="linguagem-2 bg-green">
                 <h3>CSS</h3>
                 <p>O CSS tem a tarefa de separar o conteúdo do site de sua apresentação visual, alterando elementos como cor do texto, fonte e espaçamento entre blocos, assim como todo o aspecto estético de uma página.</p>
             </section>
 
-            <section style="border: 2px solid black; background-color: purple; width: 33.33%; height: 200px; padding: 20px;">
+            <section class="linguagem-2 bg-purple">
                 <h3>JavaScript</h3>
                 <p>JavaScript é uma linguagem de programação usada por desenvolvedores para fazer páginas interativas da Internet.</p>
             </section>
@@ -168,31 +279,31 @@
 
         <hr>
 
-        <footer id="rodape" style="padding: auto;">
-            <div style="display: grid; grid-template-columns: 25% 25% 25% 25%; text-decoration: none;">
-                <div style="background-color: #efefef;">
+        <footer id="rodape" class="pad-auto">
+            <div class="footer-div">
+                <div class="bg-light-grey">
                     <h2>Sobre</h2>
                     <ul>
-                        <li style="flex-grow: 1;"> <a href="#" style="text-decoration: none;">Topo</a></li>
+                        <li class="f-grow"> <a href="#" class="txt-dc-none">Topo</a></li>
 
                         <li>Politica de Privacidade</li>
 
-                        <li style="flex-grow: 1;"> <a href="contatos.html" style="text-decoration: none;">Fale Conosco</a>
+                        <li class="f-grow"> <a href="contatos.html" class="txt-dc-none">Fale Conosco</a>
                     </ul>
                 </div>
 
                 <div>
                     <h2>Referências</h2>
                     <ul>
-                        <li style="flex-grow: 1;"> <a href="https://www.w3schools.com" style="text-decoration: none;">W3School</a></li>
+                        <li class="f-grow"> <a href="https://www.w3schools.com" target="_blank" class="txt-dc-none">W3School</a></li>
 
-                        <li style="flex-grow: 1;"> <a href="https://www.alura.com.br" style="text-decoration: none;">Alura</a></li>
+                        <li class="f-grow"> <a href="https://www.alura.com.br" class="txt-dc-none">Alura</a></li>
 
-                        <li style="flex-grow: 1;"> <a href="https://www.youtube.com" style="text-decoration: none;">Youtube</a></li>
+                        <li class="f-grow"> <a href="https://www.youtube.com" class="txt-dc-none">Youtube</a></li>
                     </ul>
                 </div>
 
-                <div style="background-color: #efefef;">
+                <div class="bg-light-grey">
                     <h2>Tutoriais</h2>
                     <ul>
                         <li>Design</li>
@@ -205,18 +316,18 @@
                 <div>
                     <h2>Outros Links</h2>
                     <ul>
-                        <li style="flex-grow: 1;"> <a href="https://github.com/Scriwolneyou" style="text-decoration: none;">GitHub</a></li>
+                        <li class="f-grow"> <a href="https://github.com/Scriwolneyou" class="txt-dc-none">GitHub</a></li>
 
-                        <li style="flex-grow: 1;"> <a href="https://www.linkedin.com/in/lucas-santos-45b202203/" style="text-decoration: none;">Linkedin</a></li>
+                        <li class="f-grow"> <a href="https://www.linkedin.com/in/lucas-santos-45b202203/" class="txt-dc-none">Linkedin</a></li>
 
-                        <li style="flex-grow: 1;"> <a href="https://www.instagram.com/lilliam_sahara/" style="text-decoration: none;">Instagram</a></li>
+                        <li class="f-grow"> <a href="https://www.instagram.com/lilliam_sahara/" class="txt-dc-none">Instagram</a></li>
                     </ul>
                 </div>
             </div>
 
             <hr>
 
-            <p style="text-align: center;">
+            <p class="txt-algn-c">
                 <strong>AndréLucas &copy; Direitos Reservados</strong>
             </p>
         </footer>

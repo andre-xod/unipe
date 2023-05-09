@@ -1,62 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacts</title>
+
+    <style>
+        .maior-div{
+            width: 80%;
+            margin-left: 125px;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #048dfc;
+            padding: 20px;
+        }
+
+        .font-size-26 {
+            font-size: 26px;
+        }
+
+        .nav-ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            background-color: #048dfc;
+            padding: 5px;
+        }
+
+        .f-grow {
+            flex-grow: 1;
+        }
+
+        .txt-dc-none{
+            text-decoration: none;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .txt-algn-c {
+            text-align: center;
+        }
+
+        .m-top-75 {
+            margin-top: 75px;
+        }
+
+        .m-bot-75 {
+            margin-bottom: 75px;
+        }
+
+        .bg-light-grey {
+            background-color: #efefef;
+        }
+
+        .pad-auto {
+            padding: auto;
+        }
+
+        .footer-div {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            text-decoration: none;
+        }
+
+    </style>
 </head>
 
 <body>
-    <div style="width: 80%; margin-left: 125px;">
-        <header style="font-size: 27px; text-align: center; background-color: #048dfc; padding: 20px;">
+    <div class="maior-div">
+        <header class="header font-size-26">
             <h1>HTML <sup>Linguagem de Marcação de <br> Hipertexto</sup></h1>
             <h2>Tutoriais para Iniciantes</h2>
         </header>
 
         <nav>
-            <ul style="list-style: none; display: flex; justify-content: space-between; background-color: #048dfc; padding: 5px;">
-                <li style="flex-grow: 1;"> <a href="index.html" style="color: white; text-decoration: none;">Início</a></li>
-                <li style="flex-grow: 1;"> <a href="#html" style="color: white; text-decoration: none;">HTML</a></li>
-                <li style="flex-grow: 1;"> <a href="#tabela" style="color: white; text-decoration: none;">Tabela e Listas</a></li>
-                <li style="flex-grow: 1;"> <a href="#sobre" style="color: white; text-decoration: none;">Sobre CSS, HTML e JS</a></li>
-                <li style="flex-grow: 1;"> <a href="#rodape" style="color: white; text-decoration: none;">Links</a></li>
-                <li style="flex-grow: 1;"> <a href="contatos.html" style="color: white; text-decoration: none;">Contato</a></li>
+            <ul class="nav-ul">
+                <li class="f-grow"> <a href="./index.html" class="white txt-dc-none">Início</a></li>
+                <li class="f-grow"> <a href="#html" class="white txt-dc-none">HTML</a></li>
+                <li class="f-grow"> <a href="#tabela" class="white txt-dc-none">Tabela e Listas</a></li>
+                <li class="f-grow"> <a href="#sobre" class="white txt-dc-none">Sobre CSS, HTML e JS</a></li>
+                <li class="f-grow"> <a href="#rodape" class="white txt-dc-none">Links</a></li>
             </ul>
         </nav>
 
-        <div style="text-align: center; margin-top: 75px; margin-bottom: 75px;">
+        <div class="txt-algn-c m-top-75 m-bot-75">
             <h2>
                 OBRIGADO POR ENTRAR EM CONTATO, <br>
                 RETORNAREMOS EM BREVE
             </h2>
         </div>
 
-        <footer id="rodape" style="padding: auto;">
-            <div style="display: grid; grid-template-columns: 25% 25% 25% 25%; text-decoration: none;">
-                <div style="background-color: #efefef;">
+        <footer id="rodape" class="pad-auto">
+            <div class="footer-div">
+                <div class="bg-light-grey">
                     <h2>Sobre</h2>
                     <ul>
-                        <li style="flex-grow: 1;"> <a href="#" style="text-decoration: none;">Topo</a></li>
+                        <li class="f-grow"> <a href="#" class="txt-dc-none">Topo</a></li>
 
                         <li>Politica de Privacidade</li>
 
-                        <li style="flex-grow: 1;"> <a href="contatos.html" style="text-decoration: none;">Fale Conosco</a>
+                        <li class="f-grow"> <a href="contatos.html" class="txt-dc-none">Fale Conosco</a>
                     </ul>
                 </div>
 
                 <div>
                     <h2>Referências</h2>
                     <ul>
-                        <li style="flex-grow: 1;"> <a href="https://www.w3schools.com" style="text-decoration: none;">W3School</a></li>
+                        <li class="f-grow"> <a href="https://www.w3schools.com" target="_blank" class="txt-dc-none">W3School</a></li>
 
-                        <li style="flex-grow: 1;"> <a href="https://www.alura.com.br" style="text-decoration: none;">Alura</a></li>
+                        <li class="f-grow"> <a href="https://www.alura.com.br" class="txt-dc-none">Alura</a></li>
 
-                        <li style="flex-grow: 1;"> <a href="https://www.youtube.com" style="text-decoration: none;">Youtube</a></li>
+                        <li class="f-grow"> <a href="https://www.youtube.com" class="txt-dc-none">Youtube</a></li>
                     </ul>
                 </div>
 
-                <div style="background-color: #efefef;">
+                <div class="bg-light-grey">
                     <h2>Tutoriais</h2>
                     <ul>
                         <li>Design</li>
@@ -69,18 +132,18 @@
                 <div>
                     <h2>Outros Links</h2>
                     <ul>
-                        <li style="flex-grow: 1;"> <a href="https://github.com/Scriwolneyou" style="text-decoration: none;">GitHub</a></li>
+                        <li class="f-grow"> <a href="https://github.com/Scriwolneyou" class="txt-dc-none">GitHub</a></li>
 
-                        <li style="flex-grow: 1;"> <a href="https://www.linkedin.com/in/lucas-santos-45b202203/" style="text-decoration: none;">Linkedin</a></li>
+                        <li class="f-grow"> <a href="https://www.linkedin.com/in/lucas-santos-45b202203/" class="txt-dc-none">Linkedin</a></li>
 
-                        <li style="flex-grow: 1;"> <a href="https://www.instagram.com/lilliam_sahara/" style="text-decoration: none;">Instagram</a></li>
+                        <li class="f-grow"> <a href="https://www.instagram.com/lilliam_sahara/" class="txt-dc-none">Instagram</a></li>
                     </ul>
                 </div>
             </div>
 
             <hr>
 
-            <p style="text-align: center;">
+            <p class="txt-algn-c">
                 <strong>AndréLucas &copy; Direitos Reservados</strong>
             </p>
         </footer>
