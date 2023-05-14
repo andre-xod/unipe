@@ -1,0 +1,169 @@
+    /* geral */
+
+.maior-div{
+    width: 80%;
+    margin-left: 125px;
+}
+
+.header {
+    text-align: center;
+    background-color: #048dfc;
+    padding: 20px;
+}
+
+.f-size-26 {
+    font-size: 26px;
+}
+
+.nav-ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: #048dfc;
+    padding: 5px;
+}
+
+.pad-auto {
+    padding: auto;
+}
+
+.footer-div {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-decoration: none;
+}
+
+    /* index */
+
+.f-grow {
+    flex-grow: 1;
+}
+
+.t-dec-none{
+    text-decoration: none;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.m-bot-50 {
+    margin-bottom: 50px;
+}
+
+.m-bot-20 {
+    margin-bottom: 20px;
+}
+
+.w-100 {
+    width: 100px;
+}
+
+.w-85-prct {
+    width: 85%;
+} 
+
+.white {
+    color: white;
+}
+
+.tabela {
+    border: 2px solid black;
+    flex: auto;
+    background-color: #196ce9;
+    width: 50%;
+}
+
+.dis-flex {
+    display: flex;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.bg-cyan{
+    background-color: #048dfc;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-purple {
+    background-color: purple;
+}
+
+.bg-light-grey {
+    background-color: #efefef;
+}
+
+.f-left {
+    float: left;
+}
+
+th {
+    background-color: #196ce9;
+    color: white;
+}
+
+tbody {
+    background-color: #cfd7e7;
+}
+
+.bg-light-blue {
+    background-color: #e8ecf4;
+}
+
+.tabela-protocol {
+    border: 2px solid black;
+    background-color: blueviolet;
+    flex: auto;
+    width: 50%;
+}
+
+.linguagem-1 {
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.linguagem-2 {
+    border: 2px solid black;
+    width: 33.33%;
+    height: 200px;
+    padding: 20px;
+}
+
+    /* contatos */
+
+.m-left-160 {
+    margin-left: 160px;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.w-300 {
+    width: 300px;
+}
+
+.w-308 {
+    width: 308px;
+}
+
+.w-177 {
+    width: 177px;
+}
+
+    /* obrigado */
+
+.m-top-75 {
+    margin-top: 75px;
+}
+
+.m-bot-75 {
+    margin-bottom: 75px;
+}
