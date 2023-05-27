@@ -1,0 +1,55 @@
+#header{
+    background-color: rgb(54, 54, 54);
+    padding: 2%;
+    display: flex;
+}
+
+body{
+    background-image: url(https://wallpapercave.com/wp/wp2328266.jpg);
+    background-size: cover;
+}
+
+#menu{
+    margin-left: 50%;
+    margin-top: 1%;
+    background-color: rgb(95, 95, 95);
+    padding-top: 0.8%;
+    width: 500px;
+}
+
+.azul:hover{
+    color: rgb(201, 201, 242);
+}
+
+.roxo:hover{
+    color: rgb(169, 129, 177);
+}
+
+.vermelho:hover{
+    color: rgb(190, 120, 135);
+}
+
+.verde:hover{
+    color: rgb(157, 199, 185);
+}
+.dec{
+    text-decoration: none;
+    color: white;
+    padding-left: 9%;
+}
+
+#games{
+    padding: 2%;
+    padding-top: 3%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-left: 5%;
+}
+
+.m-left{
+    margin-left: 2%;
+}
+
+.b-shadow{
+    box-shadow: 5px 5px 10px 1px rgb(54, 54, 54);
+}
