@@ -38,6 +38,28 @@ body{
     padding-left: 9%;
 }
 
+.w-200{
+    width: 200px;
+}
+
+.b-shadow-cold{
+    box-shadow: 10px 10px 25px 0px rgb(56, 86, 168), 10px -10px 25px 0px rgb(136, 56, 168);
+}
+
+.b-shadow-hot{
+    box-shadow: 10px 10px 25px 0px rgb(56, 168, 99), 10px -10px 25px 0px rgb(168, 56, 93);
+}
+
+.b-shadow-cold:hover{
+    width: 250px;
+    box-shadow: 0px 5px 25px 10px rgba(56, 86, 168, 0.726), 0px -5px 25px 10px rgb(136, 56, 168);
+}
+
+.b-shadow-hot:hover{
+    width: 250px;
+    box-shadow: 0px 5px 25px 10px rgba(56, 168, 99, 0.726), 0px -5px 25px 10px rgb(168, 56, 93);
+}
+
 #games{
     padding: 2%;
     padding-top: 3%;
@@ -50,6 +72,20 @@ body{
     margin-left: 2%;
 }
 
-.b-shadow{
-    box-shadow: 5px 5px 10px 1px rgb(54, 54, 54);
+/* Black */
+
+.c-white{
+    color: white;
+}
+
+.b-shadow-x{
+    box-shadow: 10px 10px 25px 0px rgb(56, 86, 168), 10px -10px 25px 0px rgb(136, 56, 168);
+}
+
+.d-flex{
+    display: flex;
+}
+
+.b-color{
+    background-color: rgba(54, 54, 54, 0.555);
 }
