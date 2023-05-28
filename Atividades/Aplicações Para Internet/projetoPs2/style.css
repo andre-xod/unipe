@@ -61,11 +61,10 @@ body{
 }
 
 #games{
-    padding: 2%;
+    margin-left: 5%;
     padding-top: 3%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    margin-left: 5%;
 }
 
 .m-left{
@@ -73,6 +72,10 @@ body{
 }
 
 /* Black */
+
+#game{
+    padding-top: 3%;
+}
 
 .c-white{
     color: white;
@@ -88,4 +91,21 @@ body{
 
 .b-color{
     background-color: rgba(54, 54, 54, 0.555);
+}
+
+.m-bottom-p{
+    margin-bottom: 3.4%;
+}
+
+.w-83{
+    width: 83%;
+}
+
+.m-left-9{
+    margin-left: 9%;
+}
+
+.trailer-txt{
+    height: 100%;
+    padding-top: 5px;
 }
