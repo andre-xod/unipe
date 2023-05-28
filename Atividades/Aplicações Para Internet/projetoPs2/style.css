@@ -1,3 +1,5 @@
+/* Home */
+
 #header{
     background-color: rgb(54, 54, 54);
     padding: 2%;
@@ -7,6 +9,8 @@
 body{
     background-image: url(https://wallpapercave.com/wp/wp2328266.jpg);
     background-size: cover;
+    background-position: center;
+    height: 1150px;
 }
 
 #menu{
@@ -51,12 +55,10 @@ body{
 }
 
 .b-shadow-cold:hover{
-    width: 250px;
     box-shadow: 0px 5px 25px 10px rgba(56, 86, 168, 0.726), 0px -5px 25px 10px rgb(136, 56, 168);
 }
 
 .b-shadow-hot:hover{
-    width: 250px;
     box-shadow: 0px 5px 25px 10px rgba(56, 168, 99, 0.726), 0px -5px 25px 10px rgb(168, 56, 93);
 }
 
@@ -64,14 +66,31 @@ body{
     margin-left: 5%;
     padding-top: 3%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+}
+
+#games a{
+    justify-content: center;
+    align-items: center;
+}
+
+#games a:empty{
+    visibility: hidden;
 }
 
 .m-left{
     margin-left: 2%;
 }
 
-/*  */
+.m-top{
+    margin-top: 12%;
+}
+
+.h-280{
+    height: 280px;
+}
+
+/* Games */
 
 #game{
     padding-top: 3%;
@@ -86,7 +105,7 @@ body{
 }
 
 .b-shadow-y{
-    box-shadow: 10px 10px 25px 0px rgba(56, 168, 99, 0.726), 10px -10px 25px 0px rgb(168, 56, 93);
+    box-shadow: 10px 10px 25px 0px rgb(56, 168, 99), 10px -10px 25px 0px rgb(168, 56, 93);
 }
 
 .d-flex{
