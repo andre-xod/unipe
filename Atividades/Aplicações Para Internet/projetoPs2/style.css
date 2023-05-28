@@ -71,7 +71,7 @@ body{
     margin-left: 2%;
 }
 
-/* Black */
+/*  */
 
 #game{
     padding-top: 3%;
@@ -83,6 +83,10 @@ body{
 
 .b-shadow-x{
     box-shadow: 10px 10px 25px 0px rgb(56, 86, 168), 10px -10px 25px 0px rgb(136, 56, 168);
+}
+
+.b-shadow-y{
+    box-shadow: 10px 10px 25px 0px rgba(56, 168, 99, 0.726), 10px -10px 25px 0px rgb(168, 56, 93);
 }
 
 .d-flex{
@@ -109,3 +113,5 @@ body{
     height: 100%;
     padding-top: 5px;
 }
+
+
